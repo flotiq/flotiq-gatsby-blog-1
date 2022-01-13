@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Layout = ({ children }) => (
-    <main>
+    <main className="font-sora">
         <Header />
         {children}
         <Footer />

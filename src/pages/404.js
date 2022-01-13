@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Logo from '../assets/Logo.svg';
+import Logo from '../assets/flotiq-logo.svg';
 
 const NotFoundPage = () => (
     <main>

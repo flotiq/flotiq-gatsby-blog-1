@@ -1,7 +1,7 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/kyan-logo.png';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
@@ -9,7 +9,7 @@ function classNames(...classes) {
 
 export default function Header() {
     return (
-        <Disclosure as="nav" className="bg-white font-sora">
+        <Disclosure as="nav" className="bg-white">
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
@@ -32,7 +32,7 @@ export default function Header() {
                                 <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
                                     <a href="/">
                                         <img
-                                            className="block h-12 w-auto"
+                                            className="block h-8 md:h-12 w-auto"
                                             src={Logo}
                                             alt="Flotiq"
                                         />

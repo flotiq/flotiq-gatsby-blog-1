@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/kyan-logo.png';
+import LogoBadge from '../assets/flotiq-logo-badge.svg';
 
 const navigation = {
     social: [
@@ -46,23 +47,48 @@ const navigation = {
 export default function Footer() {
     return (
         <footer className="bg-white">
-            <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-                <div className="mt-8 flex justify-center items-center space-x-6">
-                    <img
-                        className="block h-10 w-auto mr-4"
-                        src={Logo}
-                        alt="Flotiq"
-                    />
-                    {navigation.social.map((item) => (
-                        <a key={item.name} href={item.href} className="text-secondary hover:text-gray-500">
-                            <span className="sr-only">{item.name}</span>
-                            <item.icon className="h-6 w-6" aria-hidden="true" />
-                        </a>
-                    ))}
+            <div className="max-w-7xl mx-auto py-12 overflow-hidden lg:px-8">
+                <div className="w-full md:w-auto px-5 md:px-0 mt-8
+                flex justify-between md:justify-center items-center space-x-5 md:space-x-10"
+                >
+                    <a href="/">
+                        <img
+                            className="block h-8 w-auto md:h-10 w-auto mr-5 md:mr-10"
+                            src={Logo}
+                            alt="Flotiq"
+                        />
+                    </a>
+                    <div className="flex items-center justify-center space-x-4 md:space-x-10">
+                        {navigation.social.map((item) => (
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                className="text-secondary hover:text-gray-500
+                                p-3 md:p-0 bg-light-gray md:bg-transparent rounded md:rounded-none"
+                            >
+                                <span className="sr-only">{item.name}</span>
+                                <item.icon className="h-6 w-6" aria-hidden="true" />
+                            </a>
+                        ))}
+                    </div>
                 </div>
-                <p className="mt-8 text-center text-base text-gray-400">
-                    &copy; 2020 Workflow, Inc. All rights reserved.
-                </p>
+                <div className="w-full md:w-auto px-5 md:px-0 py-5 mt-7 md:mt-15
+                flex justify-between md:justify-center items-center bg-light-gray md:bg-transparent"
+                >
+                    <div className="flex items-center mr-12">
+                        <img
+                            className="block h-5 md:h-6 w-auto mr-2"
+                            src={LogoBadge}
+                            alt="Flotiq"
+                        />
+                        <p className="text-center text-xs md:text-base font-semibold">
+                            Powered by Flotiq
+                        </p>
+                    </div>
+                    <p className="text-center text-xs md:text-base font-light">
+                        Copyright &copy; Flotiq 2022
+                    </p>
+                </div>
             </div>
         </footer>
     );
