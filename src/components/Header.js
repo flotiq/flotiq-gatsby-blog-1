@@ -9,7 +9,7 @@ function classNames(...classes) {
 
 export default function Header() {
     return (
-        <Disclosure as="nav" className="bg-white">
+        <Disclosure as="nav" className="bg-white font-sora">
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ export default function Header() {
                                 </div>
                             </div>
                             <div className="hidden md:flex items-center justify-center w-full">
-                                <h1 className="text-3xl font-sora">Blog About Everything</h1>
+                                <h1 className="text-3xl">Blog About Everything</h1>
                             </div>
                             <div className="flex items-center">
                                 <div className="flex-shrink-0">
@@ -53,7 +53,7 @@ export default function Header() {
                                 </div>
                             </div>
                             <div className="md:hidden flex items-center justify-center w-full md:w-auto py-5 md:py-0">
-                                <h1 className="text-2xl font-sora">Blog About Everything</h1>
+                                <h1 className="text-2xl">Blog About Everything</h1>
                             </div>
                         </div>
                     </div>
