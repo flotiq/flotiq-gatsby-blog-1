@@ -1,0 +1,12 @@
+{
+  "id": "blogpost-2",
+  "slug": "post-with-picture",
+  "title": "Post with picture",
+  "content": "<p>This is going to be pretty</p>\n",
+  "headerImage": [
+    {
+      "type": "internal",
+      "dataUrl": "/api/v1/content/_media/_media-5df40ff6bb45c"
+    }
+  ]
+}

@@ -11,8 +11,8 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq gatsby starter boilerplate',
-        description: 'Flotiq gatsby starter boilerplate',
+        title: 'Flotiq gatsby starter for blog',
+        description: 'Flotiq gatsby starter for blog',
         siteUrl: 'https://example.com',
     },
     plugins: [
@@ -43,7 +43,8 @@ module.exports = {
                 downloadMediaFile: true,
                 forceReload: false,
                 includeTypes: [
-                    'example',
+                    '_media',
+                    'blogpost',
                 ],
             },
         },

@@ -1,5 +1,6 @@
 {
-  "id": "example-1",
-  "header": "Welcome to Flotiq gatsby starter boilerplate!",
-  "title": "Main page"
+  "id": "blogpost-1",
+  "slug": "hello-my-blog",
+  "title": "Hello There!",
+  "content": "<p>This will be the best place.</p>\n"
 }
