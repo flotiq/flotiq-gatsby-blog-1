@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../layouts/layout';
+import Pagination from '../components/Pagination';
 
 const IndexPage = () => {
     const data = useStaticQuery(query);
@@ -14,6 +15,7 @@ const IndexPage = () => {
             {posts.map((post) => (
                 <a href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
             ))}
+            <Pagination />
         </Layout>
     );
 };
