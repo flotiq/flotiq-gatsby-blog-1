@@ -1,16 +1,27 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
-const Announcement = () => (
-    <div className="max-w-7xl mt-12 mb-6 mx-auto px-4 py-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg flex justify-center items-center
+const Announcement = ({ data }) => {
+    const announcement = data.blogAnnouncement;
+    return (
+        <div className="max-w-7xl mt-12 mb-6 mx-auto px-4 py-4 sm:px-6 lg:px-8">
+            <div className="rounded-lg flex justify-center items-center
         bg-gradient-to-r from-turquoise to-secondary px-12 py-6"
-        >
-            <h2 className="text-center text-xl md:text-2xl leading-8 md:leading-10">
-                This is the Blog where you can find any kind of information and rich media content.
-                Use it for your needs, add content and customize in any way
-            </h2>
+            >
+                <h2 className="text-center text-xl md:text-2xl leading-8 md:leading-10">
+                    {announcement.content}
+                </h2>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default Announcement;
+
+export const pageQuery = graphql`
+    query IndexQuery {
+        allBlogAnnouncement {
+            content
+        }
+    }
+`;
