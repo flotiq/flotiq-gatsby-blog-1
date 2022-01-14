@@ -11,10 +11,9 @@ module.exports = {
                 xl: '1440px',
             },
             colors: {
-                'light-blue': '#E9F3FF',
                 primary: '#000000',
                 secondary: '#0083FC',
-                'dark-blue': '#141046',
+                'light-gray': '#F9F9F9',
             },
             fontFamily: {
                 sora: ['Sora', 'sans-serif'],
