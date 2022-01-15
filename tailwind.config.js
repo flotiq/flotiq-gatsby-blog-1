@@ -14,6 +14,7 @@ module.exports = {
                 primary: '#000000',
                 secondary: '#0083FC',
                 'light-gray': '#F9F9F9',
+                turquoise: '#64FBC1',
             },
             fontFamily: {
                 sora: ['Sora', 'sans-serif'],

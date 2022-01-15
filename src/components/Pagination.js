@@ -1,75 +1,74 @@
 import React from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
 const Pagination = () => (
 
+    /*
+    Storybook controls:
+    - size (width & height)
+    - font size
+    - background color (normal, hover & active states)
+    - border color (normal, hover & active states)
+    - border radius
+    - horizontal spacing
+    */
+
     <div className="bg-white px-4 py-3 flex items-center justify-between sm:px-6 mt-10">
-        <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-center">
+        <div className="flex-1 flex items-center justify-center">
             <div>
-                <nav className="relative z-0 inline-flex rounded-md shadow-sm space-x-2" aria-label="Pagination">
+                <nav className="relative z-0 inline-flex rounded-md space-x-2" aria-label="Pagination">
                     <a
                         href="/"
-                        className="relative inline-flex items-center px-2 py-2
-                            rounded-l-md border border-gray-300 bg-white
-                            text-sm font-medium text-gray-500 hover:bg-gray-50"
+                        className="w-20 h-8 md:w-24 md:h-10 relative inline-flex items-center justify-center
+                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        rounded-md text-black text-sm md:text-base leading-6 font-normal"
                     >
                         <span>Previous</span>
                     </a>
                     <a
                         href="/"
                         aria-current="page"
-                        className="z-10 bg-indigo-50 border-indigo-500 text-indigo-600
-                            relative inline-flex items-center px-4 py-2 border text-sm font-medium
-                            rounded leading-6 text-b"
+                        className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
+                        bg-turquoise border border-turquoise rounded-md
+                        text-black text-sm md:text-base leading-6 font-normal underline underline-offset-1"
                     >
                         1
                     </a>
                     <a
                         href="/"
-                        className="bg-white border-black text-black hover:bg-gray-50
-                            relative inline-flex items-center px-4 py-2 border text-sm font-medium
-                            rounded-md  leading-6 text-base font-normal"
+                        className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
+                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        rounded-md text-black text-sm md:text-base leading-6 font-normal"
                     >
                         2
                     </a>
                     <a
                         href="/"
-                        className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50
-                            hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+                        className="w-8 h-8 md:w-10 md:h-10 relative hidden md:inline-flex items-center justify-center
+                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        rounded-md text-black text-sm md:text-base leading-6 font-normal"
                     >
                         3
                     </a>
                     <a
                         href="/"
-                        className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50
-                            hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+                        className="w-8 h-8 md:w-10 md:h-10 relative hidden md:inline-flex items-center justify-center
+                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        rounded-md text-black text-sm md:text-base leading-6 font-normal"
                     >
-                        8
+                        4
                     </a>
-                    <a
-                        href="/"
-                        className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50
-                            relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                    >
-                        9
-                    </a>
-                    <a
-                        href="/"
-                        className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50
-                            relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                    >
-                        10
-                    </a>
-                    <span className="relative inline-flex items-center px-4 py-2 border
-                        border-gray-300 bg-white text-sm font-medium text-gray-700"
+                    <span
+                        className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
+                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        rounded-md text-black text-sm md:text-base leading-6 font-normal"
                     >
                         ...
                     </span>
                     <a
                         href="/"
-                        className="relative inline-flex items-center px-2 py-2
-                            rounded-r-md border border-gray-300 bg-white text-sm
-                            font-medium text-gray-500 hover:bg-gray-50"
+                        className="w-20 h-8 md:w-24 md:h-10 relative inline-flex items-center justify-center
+                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        rounded-md text-black text-sm md:text-base leading-6 font-normal"
                     >
                         <span>Next</span>
                     </a>
