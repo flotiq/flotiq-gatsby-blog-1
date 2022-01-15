@@ -62,7 +62,7 @@ const navigation = {
 };
 
 const Footer = () => (
-    <footer className="bg-white">
+    <footer className="bg-light-gray">
         <div className="max-w-7xl mx-auto py-12 overflow-hidden lg:px-8">
             <div className="w-full md:w-auto px-5 md:px-0 mt-8
                 flex justify-between md:justify-center items-center space-x-5 md:space-x-10"
