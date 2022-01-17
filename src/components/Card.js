@@ -47,7 +47,7 @@ const Card = () => (
             </div>
         </div>
         <div className="basis-full lg:basis-3/5 order-1 lg:order-2
-        bg-[url('http://localhost:8000/static/blog-image-1-fe9aa3cf7d5fcd63280f545c05083cc4.jpg')]"
+        bg-[url('http://localhost:8000/static/blog-image-1-fe9aa3cf7d5fcd63280f545c05083cc4.jpg')] bg-no-repeat"
         >
             <img
                 className="block w-full"
