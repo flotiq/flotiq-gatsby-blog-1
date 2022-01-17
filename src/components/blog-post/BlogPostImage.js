@@ -1,9 +1,15 @@
 import React from 'react';
-import BlogImage from '../../assets/blog-image-1.jpg';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const BlogPostImage = () => (
+const BlogPostImage = ({ headerImage, title }) => (
     <div className="pt-12 bg-gradient-to-r from-turquoise to-secondary rounded-xl">
-        <img src={BlogImage} className="w-full rounded-xl" alt="" />
+        {headerImage && (
+            <GatsbyImage
+                alt={title}
+                image={getImage(headerImage[0].localFile)}
+                className="w-full rounded-xl"
+            />
+        )}
     </div>
 );
 

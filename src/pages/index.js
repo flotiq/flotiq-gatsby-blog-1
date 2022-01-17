@@ -7,7 +7,7 @@ const IndexPage = () => {
     const data = useStaticQuery(query);
     const posts = data.allBlogpost.nodes;
     return (
-        <Layout>
+        <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
             </Helmet>

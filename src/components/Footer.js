@@ -62,7 +62,7 @@ const navigation = {
 };
 
 const Footer = () => (
-    <footer className="bg-white">
+    <footer>
         <div className="max-w-7xl mx-auto py-12 overflow-hidden lg:px-8">
             <div className="w-full md:w-auto px-5 md:px-0 mt-8
                 flex justify-between md:justify-center items-center space-x-5 md:space-x-10"
@@ -74,13 +74,13 @@ const Footer = () => (
                         alt="Flotiq"
                     />
                 </a>
-                <div className="flex items-center justify-center space-x-4 md:space-x-10">
+                <div className="flex items-center justify-center space-x-4 md:space-x-3">
                     {navigation.social.map((item) => (
                         <a
                             key={item.name}
                             href={item.href}
                             className="text-secondary hover:text-gray-500
-                                p-3 md:p-0 bg-light-gray md:bg-transparent rounded md:rounded-none"
+                                p-3 bg-light-gray rounded"
                         >
                             <span className="sr-only">{item.name}</span>
                             <item.icon className="h-6 w-6" aria-hidden="true" />
