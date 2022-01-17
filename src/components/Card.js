@@ -11,9 +11,7 @@ const Card = ({ title, excerpt, date, readingTime, tag1, tag2, tag3 }) => (
                     {title}
                 </h1>
                 <p className="text-base font-light my-5">
-                    If you’re a beginning website owner you might be wondering what a CMS is and if you need one.
-                    This article will look at some valid reasons to invest in a CMS,
-                    but also will try to shed some light on the caveats, so read on.
+                    {excerpt}
                 </p>
             </div>
             <div className="w-full">
@@ -53,7 +51,7 @@ const Card = ({ title, excerpt, date, readingTime, tag1, tag2, tag3 }) => (
             </div>
         </div>
         <div className="basis-full lg:basis-3/5 order-1 lg:order-2
-        bg-[url('http://localhost:8000/static/blog-image-1-fe9aa3cf7d5fcd63280f545c05083cc4.jpg')]
+        bg-[url('http://localhost:8000/static/blog-image-1-8658fb10e5462297e36ff99ceebd7109.jpg')]
         bg-no-repeat bg-cover bg-center"
         >
             <img
