@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from '../assets/kyan-logo.png';
 
 const Header = () => (
-    <Disclosure as="nav" className="bg-white">
+    <Disclosure as="nav" className="bg-light-gray">
         {({ open }) => (
             <>
                 <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
