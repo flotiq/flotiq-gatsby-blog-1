@@ -16,10 +16,7 @@ const IndexPage = ({ data, pageContext }) => {
             <Announcement content="This is the Blog where you can find any kind of information and rich media content.
 Use it for your needs, add content and customize in any way"
             />
-            <BlogCards />
-            {posts.map((post) => (
-                <a href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
-            ))}
+            <BlogCards posts={posts} />
             <Pagination page={pageContext.currentPage} numOfPages={pageContext.numPages} />
         </Layout>
     );
@@ -50,6 +47,9 @@ export const pageQuery = graphql`
                 id
                 slug
                 title
+                flotiqInternal {
+                    createdAt
+                }
             }
         }
     }

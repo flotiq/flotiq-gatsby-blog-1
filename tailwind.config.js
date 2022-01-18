@@ -11,7 +11,7 @@ module.exports = {
                 xl: '1440px',
             },
             colors: {
-                primary: '#000000',
+                primary: '#64FBC1',
                 secondary: '#0083FC',
                 'light-gray': '#F9F9F9',
                 turquoise: '#64FBC1',
