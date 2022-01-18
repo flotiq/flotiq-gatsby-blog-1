@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import Pagination from '../components/Pagination';
 
-const IndexPage = () => {
-    const data = useStaticQuery(query);
+const IndexPage = ({ data, pageContext }) => {
     const posts = data.allBlogpost.nodes;
     return (
         <Layout>
@@ -15,19 +14,19 @@ const IndexPage = () => {
             {posts.map((post) => (
                 <a href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
             ))}
-            <Pagination />
+            <Pagination page={pageContext.currentPage} numOfPages={pageContext.numPages} />
         </Layout>
     );
 };
 
-const query = graphql`
-    query IndexQuery {
+export const pageQuery = graphql`
+    query indexQuery($skip: Int!, $limit: Int!) {
         site {
             siteMetadata {
                 title
             }
         }
-        allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}) {
+        allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
             nodes {
                 headerImage {
                     extension
