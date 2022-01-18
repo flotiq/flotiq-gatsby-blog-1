@@ -1,20 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../layouts/layout';
+import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
     return (
-        <Layout>
-            <p>{post.title}</p>
-            {post.headerImage && (
-                <GatsbyImage
-                    alt={post.title}
-                    image={getImage(post.headerImage[0].localFile)}
-                    className="post-image"
-                />
-            )}
+        <Layout additionalClass={['bg-white']}>
+            <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
+                <BlogPostHeader headerTitle={post.title} additionalClass={['text-center']} />
+                <p>{post.title}</p>
+            </div>
         </Layout>
     );
 };
