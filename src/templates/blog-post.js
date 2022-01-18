@@ -1,20 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Layout from '../layouts/layout';
+  import Layout from '../layouts/layout';
+import BlogPostText from "../components/blog-post/BlogPostText";
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
     return (
         <Layout>
-            <p>{post.title}</p>
-            {post.headerImage && (
-                <GatsbyImage
-                    alt={post.title}
-                    image={getImage(post.headerImage[0].localFile)}
-                    className="post-image"
-                />
-            )}
+          <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
+            <BlogPostText additionalClass={['py-6']} textContent="Flotiq strongly encourages separation of concerns and isolates the data from the presentation layer (unlike traditional CMS like WordPress). Thanks to that - you can easily use your data anywhere you need them, e.g.: "/>
+          </div>
         </Layout>
     );
 };
