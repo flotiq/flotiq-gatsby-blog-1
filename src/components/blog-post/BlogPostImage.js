@@ -2,7 +2,7 @@ import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const BlogPostImage = ({ headerImage, title }) => (
-    <div className="pt-12 bg-gradient-to-r from-turquoise to-secondary rounded-xl">
+    <div className="pt-12 bg-gradient-to-r from-primary to-secondary rounded-xl">
         {headerImage && (
             <GatsbyImage
                 alt={title}
