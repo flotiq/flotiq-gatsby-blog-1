@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../layouts/layout';
+import Announcement from '../components/Announcement';
 
 const IndexPage = () => {
     const data = useStaticQuery(query);
@@ -11,6 +12,9 @@ const IndexPage = () => {
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
             </Helmet>
+            <Announcement content="This is the Blog where you can find any kind of information and rich media content.
+Use it for your needs, add content and customize in any way"
+            />
             {posts.map((post) => (
                 <a href={`/${post.slug}`}><p key={post.id}>{post.title}</p></a>
             ))}
