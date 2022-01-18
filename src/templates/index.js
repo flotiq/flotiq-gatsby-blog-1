@@ -9,7 +9,7 @@ import Announcement from '../components/Announcement';
 const IndexPage = ({ data, pageContext }) => {
     const posts = data.allBlogpost.nodes;
     return (
-        <Layout className="bg-light-gray">
+        <Layout additionalClass={['bg-light-gray']}>
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
             </Helmet>
