@@ -11,13 +11,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader
                     headingLevel="h1"
                     headerTitle={post.title}
-                    additionalClass={['text-center text-4xl py-10']}
+                    additionalClass={['text-center py-10']}
                 />
-                <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['text-3xl py-5']} />
-                <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['text-2xl py-5']} />
-                <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['text-xl py-5']} />
-                <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['text-lg py-5']} />
-                <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['text-base py-5']} />
+                <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
+                <h1>1</h1>
+                <h2>1</h2>
+                <h3>1</h3>
             </div>
         </Layout>
     );
