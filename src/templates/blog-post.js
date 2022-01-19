@@ -21,7 +21,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
-                <BlogPostBlockquote />
+                <BlogPostBlockquote
+                    additionalClass={['my-5']}
+                    blockquoteContent="If you’re a beginning website owner you might be wondering what a
+                CMS is and if you need one. This article will look at some valid reasons to invest in
+                a CMS, but also will try to shed some light on the caveats, so read on."
+                    blockquoteAuthor="flotiq"
+                />
             </div>
         </Layout>
     );
