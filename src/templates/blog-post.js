@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -9,7 +10,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout additionalClass={['bg-white']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostImage headerImage={post.headerImage} title={post.title} />
-                <p>{post.title}</p>
+                <BlogPostHeader
+                    headingLevel="h1"
+                    headerTitle={post.title}
+                    additionalClass={['text-center py-10']}
+                />
+                <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
+                <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
             </div>
         </Layout>
     );
