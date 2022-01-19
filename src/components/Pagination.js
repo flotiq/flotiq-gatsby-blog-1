@@ -10,7 +10,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                             <a
                                 href={page > 2 ? `/${page - 1}` : '/'}
                                 className="w-20 h-8 md:w-24 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                             >
                                 <span>Previous</span>
@@ -18,7 +18,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                             <a
                                 href="/"
                                 className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                             >
                                 1
@@ -26,8 +26,8 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                             { page > 4 && (
                                 <span
                                     className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center
-                                            justify-center bg-white hover:bg-turquoise border border-black
-                                            hover:border-turquoise hover:transition-all rounded-md text-black text-sm
+                                            justify-center bg-white hover:bg-primary border border-black
+                                            hover:border-primary hover:transition-all rounded-md text-black text-sm
                                             md:text-base leading-6 font-normal"
                                 >
                                     ...
@@ -40,7 +40,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                         <a
                             href={`/${page - 2}`}
                             className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                         >
                             {page - 2}
@@ -50,7 +50,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                         <a
                             href={`/${page - 1}`}
                             className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                         >
                             {page - 1}
@@ -59,7 +59,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                     <span
                         aria-current="page"
                         className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-turquoise border border-turquoise rounded-md
+                        bg-primary border border-primary rounded-md
                         text-black text-sm md:text-base leading-6 font-normal underline underline-offset-1"
                     >
                         {page}
@@ -68,7 +68,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                         <a
                             href={`/${page + 1}`}
                             className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                         >
                             {page + 1}
@@ -78,7 +78,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                         <a
                             href={`/${page + 2}`}
                             className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                         >
                             {page + 2}
@@ -90,8 +90,8 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                             {page < numOfPages - 3 && (
                                 <span
                                     className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center
-                                            justify-center bg-white hover:bg-turquoise border border-black
-                                            hover:border-turquoise hover:transition-all rounded-md text-black text-sm
+                                            justify-center bg-white hover:bg-primary border border-black
+                                            hover:border-primary hover:transition-all rounded-md text-black text-sm
                                             md:text-base leading-6 font-normal"
                                 >
                                     ...
@@ -100,7 +100,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                             <a
                                 href={`/${numOfPages}`}
                                 className="w-8 h-8 md:w-10 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                             >
                                 {numOfPages}
@@ -108,7 +108,7 @@ const Pagination = ({ page, numOfPages }) => numOfPages > 1 && (
                             <a
                                 href={`/${page + 1}`}
                                 className="w-20 h-8 md:w-24 md:h-10 relative inline-flex items-center justify-center
-                        bg-white hover:bg-turquoise border border-black hover:border-turquoise hover:transition-all
+                        bg-white hover:bg-primary border border-black hover:border-primary hover:transition-all
                         rounded-md text-black text-sm md:text-base leading-6 font-normal"
                             >
                                 <span>Next</span>
