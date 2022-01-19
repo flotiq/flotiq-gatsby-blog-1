@@ -3,8 +3,6 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
-import BlogPostAudio from '../components/blog-post/BlogPostAudio';
-import sampleAudio from '../assets/audio/horse.mp3';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
@@ -22,7 +20,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
-                <BlogPostAudio audioFile={sampleAudio} additionalClass={['py-5']} />
             </div>
         </Layout>
     );
