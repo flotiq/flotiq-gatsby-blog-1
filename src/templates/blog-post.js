@@ -8,7 +8,7 @@ import BlogPostBlockquote from '../components/blog-post/BlogPostBlockquote';
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
     return (
-        <Layout additionalClass={['bg-white']}>
+        <Layout additionalClass={['bg-white px-6']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostImage headerImage={post.headerImage} title={post.title} />
                 <BlogPostHeader
