@@ -1,9 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import moment from 'moment';
 import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostMetaDetails from '../components/blog-post/BlogPostMetaDetails';
 import BlogPostNavigation from '../components/blog-post/BlogPostNavigation';
 import BlogPostAudio from '../components/blog-post/BlogPostAudio';
 import sampleAudio from '../assets/audio/horse.mp3';
@@ -24,6 +26,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout additionalClass={['bg-white px-6']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostImage headerImage={post.headerImage} title={post.title} />
+                <BlogPostMetaDetails
+                    date={moment(post.flotiqInternal.createdAt).format(' Do MMMM yyyy')}
+                    readingTime=" 7 min"
+                    tags={['#photo', '#cookig', '#food']}
+                    additionalClass={['py-6']}
+                />
                 <BlogPostHeader
                     headingLevel="h1"
                     headerTitle={post.title}
@@ -55,8 +63,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     );
 };
 
-export default BlogPostTemplate;
-
 export const pageQuery = graphql`
     query BlogPostBySlug($slug: String!) {
         site {
@@ -80,6 +86,11 @@ export const pageQuery = graphql`
                     }
                 }
             }
+            flotiqInternal {
+                createdAt
+            }
         }
     }
 `;
+
+export default BlogPostTemplate;
