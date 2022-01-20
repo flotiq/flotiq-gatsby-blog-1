@@ -1,5 +1,5 @@
 import React from 'react';
-import { Announcement as FlotiqAnnouncement } from 'flotiq-components-react';
+import {Announcement as FlotiqAnnouncement} from 'flotiq-components-react';
 
 const Announcement = ({ content }) => (
     <div className="max-w-7xl mt-12 mb-6 mx-auto px-4 py-4 sm:px-6 lg:px-8">
@@ -9,9 +9,10 @@ const Announcement = ({ content }) => (
                     {content}
                 </h2>
             )}
-            additionalClasses={['bg-gradient-to-r', 'from-turquoise', 'to-secondary', 'rounded-lg']}
+            additionalClasses={['bg-gradient-to-r', 'from-turquoise', 'to-secondary']}
             textAlignment="center"
             textSize="xl"
+            rounded="lg"
         />
     </div>
 );
