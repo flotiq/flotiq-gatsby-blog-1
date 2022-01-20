@@ -5,6 +5,7 @@ import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostAuthor from '../components/blog-post/BlogPostAuthor';
 import BlogPostMetaDetails from '../components/blog-post/BlogPostMetaDetails';
 import BlogPostNavigation from '../components/blog-post/BlogPostNavigation';
 import BlogPostAudio from '../components/blog-post/BlogPostAudio';
@@ -57,6 +58,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     blockquoteAuthor="flotiq"
                 />
                 <BlogPostList listItems={listItems} additionalClass={['pt-5 pl-5']} />
+                <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
             </div>
             <BlogPostNavigation additionalClass={['mt-3']} prevText="Previous post" nextText="Next post" />
         </Layout>
