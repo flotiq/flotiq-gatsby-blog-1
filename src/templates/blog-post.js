@@ -49,7 +49,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
-                <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
                 <BlogPostAudio audioFile={sampleAudio} audioName="Audio" additionalClass={['py-5']} />
                 <BlogPostBlockquote
                     additionalClass={['my-5']}
@@ -59,6 +58,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     blockquoteAuthor="flotiq"
                 />
                 <BlogPostList listItems={listItems} additionalClass={['pt-5 pl-5']} />
+                <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
             </div>
             <BlogPostNavigation additionalClass={['mt-3']} prevText="Previous post" nextText="Next post" />
         </Layout>
