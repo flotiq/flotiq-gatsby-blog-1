@@ -1,12 +1,22 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostList from '../components/blog-post/BlogPostList';
 import BlogPostBlockquote from '../components/blog-post/BlogPostBlockquote';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
+    const listItems = [
+        'Websites',
+        'Mobile apps',
+        'Billboard advertising',
+        'Desktop applications',
+        'Amazon Lambda functions',
+        'Mailing systems',
+    ];
     return (
         <Layout additionalClass={['bg-white px-6']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
@@ -15,6 +25,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     headingLevel="h1"
                     headerTitle={post.title}
                     additionalClass={['text-center py-10']}
+                />
+                <BlogPostText
+                    additionalClass={['py-6']}
+                    textContent="Flotiq strongly encourages separation of concerns and isolates the data from the
+                     presentation layer (unlike traditional CMS like WordPress). Thanks to that - you can easily use
+                      your data anywhere you need them, e.g.: "
                 />
                 <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
@@ -28,6 +44,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 a CMS, but also will try to shed some light on the caveats, so read on."
                     blockquoteAuthor="flotiq"
                 />
+                <BlogPostList listItems={listItems} additionalClass={['pt-5 pl-5']} />
             </div>
         </Layout>
     );
