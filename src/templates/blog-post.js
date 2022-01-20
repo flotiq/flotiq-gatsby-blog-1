@@ -4,6 +4,8 @@ import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostAudio from '../components/blog-post/BlogPostAudio';
+import sampleAudio from '../assets/audio/horse.mp3';
 import BlogPostList from '../components/blog-post/BlogPostList';
 import BlogPostBlockquote from '../components/blog-post/BlogPostBlockquote';
 
@@ -37,6 +39,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
+                <BlogPostAudio audioFile={sampleAudio} audioName="Audio" additionalClass={['py-5']} />
                 <BlogPostBlockquote
                     additionalClass={['my-5']}
                     blockquoteContent="If you’re a beginning website owner you might be wondering what a
