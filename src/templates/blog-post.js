@@ -3,9 +3,12 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostFeaturedImage from '../components/blog-post/BlogPostFeaturedImage';
+import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostContentImage from '../assets/blog-image-1.jpg';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
+    const contentImage = BlogPostContentImage;
     return (
         <Layout additionalClass={['bg-white']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
@@ -17,6 +20,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 />
                 <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
+                <BlogPostImage contentImage={contentImage} additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
