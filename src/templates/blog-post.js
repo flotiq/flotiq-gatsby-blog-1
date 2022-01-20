@@ -4,9 +4,18 @@ import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostList from '../components/blog-post/BlogPostList';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
+    const listItems = [
+        'Websites',
+        'Mobile apps',
+        'Billboard advertising',
+        'Desktop applications',
+        'Amazon Lambda functions',
+        'Mailing systems',
+    ];
     return (
         <Layout additionalClass={['bg-white']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
@@ -27,6 +36,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
+                <BlogPostList listItems={listItems} additionalClass={['pt-5 pl-5']} />
             </div>
         </Layout>
     );
