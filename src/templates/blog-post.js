@@ -4,6 +4,7 @@ import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostNavigation from '../components/blog-post/BlogPostNavigation';
 import BlogPostAudio from '../components/blog-post/BlogPostAudio';
 import sampleAudio from '../assets/audio/horse.mp3';
 import BlogPostList from '../components/blog-post/BlogPostList';
@@ -49,6 +50,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 />
                 <BlogPostList listItems={listItems} additionalClass={['pt-5 pl-5']} />
             </div>
+            <BlogPostNavigation additionalClass={['mt-3']} prevText="Previous post" nextText="Next post" />
         </Layout>
     );
 };
