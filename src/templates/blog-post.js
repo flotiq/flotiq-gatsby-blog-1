@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostMetaDetails from '../components/blog-post/BlogPostMetaDetails';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
@@ -10,6 +11,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout additionalClass={['bg-white']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostImage headerImage={post.headerImage} title={post.title} />
+                <BlogPostMetaDetails />
                 <BlogPostHeader
                     headingLevel="h1"
                     headerTitle={post.title}
