@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
             </div>
-            <BlogPostNavigation additionalClass={['mt-3']} />
+            <BlogPostNavigation additionalClass={['mt-3']} prevText="Previous post" nextText="Next post" />
         </Layout>
     );
 };
