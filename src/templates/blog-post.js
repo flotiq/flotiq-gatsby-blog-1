@@ -4,6 +4,7 @@ import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
+import BlogPostAuthor from '../components/blog-post/BlogPostAuthor';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
@@ -27,6 +28,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <BlogPostHeader headingLevel="h2" headerTitle="# Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="# Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
+                <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
             </div>
         </Layout>
     );
