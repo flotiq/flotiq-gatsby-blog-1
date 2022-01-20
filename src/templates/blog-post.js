@@ -15,6 +15,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     headingLevel="h1"
                     headerTitle={post.title}
                     additionalClass={['text-center py-10']}
+                />
                 <BlogPostText
                     additionalClass={['py-6']}
                     textContent="Flotiq strongly encourages separation of concerns and isolates the data from the
