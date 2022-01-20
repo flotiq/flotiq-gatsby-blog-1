@@ -1,10 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 
-const BlogPostMetaDetails = ({ date, readingTime, tags }) => (
-    <div className="px-12 py-5 flex items-center justify-between font-light">
-        <div className="basis-1/2 flex items-center justify-start">
-            <p className="mr-8">
+const BlogPostMetaDetails = ({ date, readingTime, tags, additionalClass }) => (
+    <div className={['px-6 md:px-12 flex flex-wrap '
+    + 'items-center justify-between font-light', ...additionalClass].join(' ')}
+    >
+        <div className="basis-full md:basis-1/2 flex flex-wrap items-center justify-center md:justify-start space-x-6">
+            <p>
                 Date:
                 {date}
             </p>
@@ -14,7 +15,9 @@ const BlogPostMetaDetails = ({ date, readingTime, tags }) => (
             </p>
             <div />
         </div>
-        <div className="basis-1/2 flex items-center justify-end space-x-8">
+        <div className="mt-4 md:mt-0 basis-full md:basis-1/2
+        flex flex-wrap items-center justify-center md:justify-end space-x-6 md:space-x-8"
+        >
             {tags && tags.map((tag, index) => (
                 <a
                     href="/"
@@ -26,17 +29,5 @@ const BlogPostMetaDetails = ({ date, readingTime, tags }) => (
         </div>
     </div>
 );
-
-export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
-        allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
-            nodes {
-                flotiqInternal {
-                    createdAt
-                }
-            }
-        }
-    }
-`;
 
 export default BlogPostMetaDetails;

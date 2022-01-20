@@ -13,9 +13,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostImage headerImage={post.headerImage} title={post.title} />
                 <BlogPostMetaDetails
-                    date={moment(post.flotiqInternal.createdAt).format('Do MMMM yyyy')}
+                    date={moment(post.flotiqInternal.createdAt).format(' Do MMMM yyyy')}
                     readingTime=" 7 min"
                     tags={['#photo', '#cookig', '#food']}
+                    additionalClass={['py-6']}
                 />
                 <BlogPostHeader
                     headingLevel="h1"
