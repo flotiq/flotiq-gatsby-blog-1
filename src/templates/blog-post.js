@@ -1,11 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import moment from 'moment';
 import Layout from '../layouts/layout';
 import BlogPostText from '../components/blog-post/BlogPostText';
 import BlogPostHeader from '../components/blog-post/BlogPostHeader';
 import BlogPostFeaturedImage from '../components/blog-post/BlogPostFeaturedImage';
 import BlogPostImage from '../components/blog-post/BlogPostImage';
 import BlogPostContentImage from '../assets/blog-image-1.jpg';
+import BlogPostAuthor from '../components/blog-post/BlogPostAuthor';
+import BlogPostMetaDetails from '../components/blog-post/BlogPostMetaDetails';
+import BlogPostNavigation from '../components/blog-post/BlogPostNavigation';
 import BlogPostAudio from '../components/blog-post/BlogPostAudio';
 import sampleAudio from '../assets/audio/horse.mp3';
 import BlogPostList from '../components/blog-post/BlogPostList';
@@ -26,6 +30,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout additionalClass={['bg-white px-6']}>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostFeaturedImage headerImage={post.headerImage} title={post.title} />
+                <BlogPostMetaDetails
+                    date={moment(post.flotiqInternal.createdAt).format(' Do MMMM yyyy')}
+                    readingTime=" 7 min"
+                    tags={['#photo', '#cookig', '#food']}
+                    additionalClass={['py-6']}
+                />
                 <BlogPostHeader
                     headingLevel="h1"
                     headerTitle={post.title}
@@ -52,12 +62,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     blockquoteAuthor="flotiq"
                 />
                 <BlogPostList listItems={listItems} additionalClass={['pt-5 pl-5']} />
+                <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
             </div>
+            <BlogPostNavigation additionalClass={['mt-3']} prevText="Previous post" nextText="Next post" />
         </Layout>
     );
 };
-
-export default BlogPostTemplate;
 
 export const pageQuery = graphql`
     query BlogPostBySlug($slug: String!) {
@@ -82,6 +92,11 @@ export const pageQuery = graphql`
                     }
                 }
             }
+            flotiqInternal {
+                createdAt
+            }
         }
     }
 `;
+
+export default BlogPostTemplate;
