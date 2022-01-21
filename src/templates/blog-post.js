@@ -39,7 +39,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 />
                 <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h1" headerTitle="# Header 1" additionalClass={['py-5']} />
-                <BlogPostImage contentImage={contentImage} additionalClass={['py-5']} />
+                <BlogPostImage contentImage={contentImage} contentImageAlt="Content image" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h2" headerTitle="## Header 2" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h3" headerTitle="### Header 3" additionalClass={['py-5']} />
                 <BlogPostHeader headingLevel="h4" headerTitle="cytat" additionalClass={['py-5']} />
