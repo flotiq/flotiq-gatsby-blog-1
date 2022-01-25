@@ -5274,7 +5274,7 @@ flatted@^3.1.0:
 
 "flotiq-components-react@https://github.com/flotiq/flotiq-components-react.git":
   version "0.3.0"
-  resolved "https://github.com/flotiq/flotiq-components-react.git#a6d07b245e9453b7d1e889833463ce6c7f5fe6cf"
+  resolved "https://github.com/flotiq/flotiq-components-react.git#a3b3e4972fa84a34d1d0cc8efd2539ad0608ddef"
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   version "1.14.6"

@@ -27,6 +27,7 @@ module.exports = {
         require('@tailwindcss/typography'),
     ],
     presets: [
-        require('./node_modules/flotiq-components-react/dist/tailwind.preset.js'),
+        require('./node_modules/flotiq-components-react/dist/tailwind.preset'),
     ],
+    safelist: require('./node_modules/flotiq-components-react/dist/tailwind.safelist'),
 };
