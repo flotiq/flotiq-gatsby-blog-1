@@ -1,16 +1,11 @@
 import React from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const BlogPostImage = ({ headerImage, title }) => (
-    <div className="pt-12 bg-gradient-to-r from-primary to-secondary rounded-xl">
-        {headerImage && (
-            <GatsbyImage
-                alt={title}
-                image={getImage(headerImage[0].localFile)}
-                className="w-full rounded-xl"
-            />
-        )}
-    </div>
+const BlogPostImage = ({ contentImage, contentImageAlt, additionalClass }) => (
+    <img
+        src={contentImage}
+        alt={contentImageAlt}
+        className={['px-12 w-full md:w-9/12 m-auto rounded-3xl overflow-hidden', ...additionalClass].join(' ')}
+    />
 );
 
 export default BlogPostImage;
