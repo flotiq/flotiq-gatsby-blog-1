@@ -10,9 +10,7 @@ const BlogCards = ({ posts }) => (
                 key={post.id}
                 onClick={() => { navigate(`/${post.slug}`); }}
                 title={post.title}
-                excerpt="If you’re a beginning website owner you might be wondering what a
-            CMS is and if you need one. This article will look at some valid reasons to invest in a CMS,
-            but also will try to shed some light on the caveats, so read on."
+                excerpt={post.excerpt}
                 tags={['#photo', '#cookig', '#food']}
                 date={moment(post.flotiqInternal.createdAt).format('Do MMMM yyyy')}
                 readingTime="7 min"

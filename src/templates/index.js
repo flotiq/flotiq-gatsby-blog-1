@@ -43,8 +43,8 @@ export const pageQuery = graphql`
                         }
                     }
                 }
-                content
                 id
+                excerpt
                 slug
                 title
                 flotiqInternal {

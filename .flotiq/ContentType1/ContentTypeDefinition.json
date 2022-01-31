@@ -20,15 +20,44 @@
             "minLength": 1
           },
           "content": {
+            "type": "object",
+            "minLength": 1,
+            "properties": {
+              "time": {
+                "type": "number"
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": true
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "excerpt": {
             "type": "string",
             "minLength": 1
-          },
-          "thumbnail": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DataSource"
-            },
-            "minItems": 0
           },
           "headerImage": {
             "type": "array",
@@ -43,6 +72,7 @@
     "required": [
       "title",
       "slug",
+      "excerpt",
       "content"
     ],
     "additionalProperties": false
@@ -51,8 +81,8 @@
     "order": [
       "title",
       "slug",
+      "excerpt",
       "content",
-      "thumbnail",
       "headerImage"
     ],
     "propertiesConfig": {
@@ -73,17 +103,13 @@
         "label": "Content",
         "unique": false,
         "helpText": "",
-        "inputType": "richtext"
+        "inputType": "block"
       },
-      "thumbnail": {
-        "label": "Thumbnail",
+      "excerpt": {
+        "label": "Excerpt",
         "unique": false,
         "helpText": "",
-        "inputType": "datasource",
-        "validation": {
-          "relationMultiple": false,
-          "relationContenttype": "_media"
-        }
+        "inputType": "textarea"
       },
       "headerImage": {
         "label": "Header image",
