@@ -73,8 +73,8 @@
         "id": "RQddK_jT0f",
         "data": {
           "url": "https://api.flotiq.com/image/0x0/_media-4e30edc8-d1b5-45a1-842a-80f5e8467121.mp3",
-          "width": "",
-          "height": "",
+          "width": 0,
+          "height": 0,
           "caption": "Example audio file",
           "fileName": "file_example_MP3_700KB.mp3",
           "extension": "mp3",
