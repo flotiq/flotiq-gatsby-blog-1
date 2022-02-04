@@ -1,37 +1,48 @@
 import React from 'react';
+import { Card } from 'flotiq-components-react';
 
-const Card = ({ title, excerpt, date, readingTime, tags, image, onClick }) => {
+const CustomCard = ({ title, excerpt, date, readingTime, tags, image, onClick }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
     return (
-        <div
-            className="flex flex-wrap lg:flex-nowrap align-start bg-white
-                overflow-hidden rounded-lg mb-4 cursor-pointer"
+        <Card
+            vertical
             onClick={onClick}
+            bordered={false}
+            additionalClasses={['mb-4 cursor-pointer']}
+            proportionsForVertical={{
+                body: '2/5',
+                img: '3/5',
+                breakpoint: 'lg',
+            }}
         >
-            <div className="flex flex-col items-start justify-between basis-full lg:basis-2/5
-        order-2 lg:order-1 px-5 md:px-10 pt-10 pb-5"
+            <Card.Body
+                additionalClasses={[
+                    'flex flex-col items-start justify-between order-2 lg:order-1 px-5 md:px-10 pt-10 pb-5',
+                ]}
             >
                 <div>
-                    <h1 className="text-3xl font-semibold leading-10">
+                    <Card.Title>
                         {title}
-                    </h1>
-                    <p className="text-base font-light my-5">
+                    </Card.Title>
+                    <Card.Text additionalClasses={['line-clamp-5 lg:line-clamp-4 xl:line-clamp-5']}>
                         {excerpt}
-                    </p>
+                    </Card.Text>
                 </div>
                 <div className="w-full">
-                    <div className="flex flex-wrap justify-start text-sm font-light mt-5">
+                    <div className="flex flex-wrap justify-start text-sm font-light mt-5 md:mt-1 xl:mt-5">
                         {tags && tags.map((tag, index) => (
                             <a
                                 href="/"
-                                className={`mx-1 my-1 px-6 py-2 inline-flex items-center justify-center
-                        rounded-md underline text-sm font-medium ${backgrounds[index % 3]}`}
+                                className={`mx-1 my-1 px-6 py-2 md:px-2 md:py-1 xl:px-6 xl:py-2
+                                    inline-flex items-center justify-center
+                                    rounded-md underline text-sm font-medium ${backgrounds[index % 3]}`}
+                                key={tag}
                             >
                                 {tag}
                             </a>
                         ))}
                     </div>
-                    <div className="flex flex-wrap justify-between text-sm font-light mt-5">
+                    <div className="flex flex-wrap justify-between text-sm md:text-xs xl:text-sm font-light mt-5">
                         <p className="mr-5">
                             Date:
                             {' '}
@@ -44,21 +55,10 @@ const Card = ({ title, excerpt, date, readingTime, tags, image, onClick }) => {
                         </p>
                     </div>
                 </div>
-            </div>
-            <div
-                className="basis-full lg:basis-3/5 order-1 lg:order-2 bg-no-repeat bg-cover bg-center bg-secondary"
-                style={{ backgroundImage: `url('${image}')` }}
-            >
-                {image && (
-                    <img
-                        className="block lg:hidden w-full"
-                        src={image}
-                        alt={title}
-                    />
-                )}
-            </div>
-        </div>
+            </Card.Body>
+            <Card.Img src={image} alt={title} additionalContainerClasses={['order-1 lg:order-2']} />
+        </Card>
     );
 };
 
-export default Card;
+export default CustomCard;

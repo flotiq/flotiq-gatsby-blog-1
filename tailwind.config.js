@@ -15,8 +15,8 @@ module.exports = {
                 primary: '#64FBC1',
                 secondary: '#0083FC',
                 'light-gray': '#F9F9F9',
-                turquoise: '#64FBC1',
                 'olive-green': '#C6FB55',
+                dark: '#000000',
             },
             fontFamily: {
                 sora: ['Sora', 'sans-serif'],
@@ -25,6 +25,7 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/typography'),
+        require('@tailwindcss/line-clamp'),
     ],
     presets: [
         require('./node_modules/flotiq-components-react/dist/tailwind.preset'),
