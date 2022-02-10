@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                             captionAdditionalClasses: ['bg-primary rounded px-8 py-1.5 opacity-100'],
                         }
                     }
-                    paragraphProps={{ additionalClasses: ['font-normal'] }}
+                    paragraphProps={{ additionalClasses: ['font-light'] }}
                 />
                 <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
             </div>
