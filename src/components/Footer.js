@@ -6,7 +6,7 @@ const navigation = {
     social: [
         {
             name: 'Facebook',
-            href: '#',
+            href: 'https://www.facebook.com/flotiq',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 13 25" {...props}>
                     <path
@@ -22,7 +22,7 @@ const navigation = {
         },
         {
             name: 'LinkedIn',
-            href: '#',
+            href: 'https://www.linkedin.com/company/flotiq/',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 32 32" {...props}>
                     <rect y="9" width="7" height="23" />
@@ -37,7 +37,7 @@ const navigation = {
         },
         {
             name: 'Link',
-            href: '#',
+            href: 'https://flotiq.com',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 26.68 11.63" {...props}>
                     <path
@@ -79,8 +79,10 @@ const Footer = () => (
                         <a
                             key={item.name}
                             href={item.href}
+                            target="_blank"
                             className="text-secondary hover:text-gray-500
                                 p-3 bg-light-gray rounded"
+                            rel="noreferrer"
                         >
                             <span className="sr-only">{item.name}</span>
                             <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -91,16 +93,18 @@ const Footer = () => (
             <div className="w-full md:w-auto px-5 md:px-0 py-5 mt-7 md:mt-15
                 flex justify-between md:justify-center items-center bg-light-gray md:bg-transparent"
             >
-                <div className="flex items-center mr-12">
-                    <img
-                        className="block h-5 md:h-6 w-auto mr-2"
-                        src={LogoBadge}
-                        alt="Flotiq"
-                    />
-                    <p className="text-center text-xs md:text-base font-semibold">
-                        Powered by Flotiq
-                    </p>
-                </div>
+                <a href="https://flotiq.com" target="_blank" rel="noreferrer">
+                    <div className="flex items-center mr-12">
+                        <img
+                            className="block h-5 md:h-6 w-auto mr-2"
+                            src={LogoBadge}
+                            alt="Flotiq"
+                        />
+                        <p className="text-center text-xs md:text-base font-semibold">
+                            Powered by Flotiq
+                        </p>
+                    </div>
+                </a>
                 <p className="text-center text-xs md:text-base font-light">
                     Copyright &copy; Flotiq 2022
                 </p>

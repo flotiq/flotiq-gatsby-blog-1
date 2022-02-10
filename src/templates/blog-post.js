@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import moment from 'moment';
 import { Content, Header } from 'flotiq-components-react';
+import { Helmet } from 'react-helmet';
 import Layout from '../layouts/layout';
 import BlogPostFeaturedImage from '../components/blog-post/BlogPostFeaturedImage';
 import BlogPostAuthor from '../components/blog-post/BlogPostAuthor';
@@ -12,6 +13,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     const post = data.blogpost;
     return (
         <Layout additionalClass={['bg-white px-6']}>
+            <Helmet>
+                <title>{post.title}</title>
+            </Helmet>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostFeaturedImage headerImage={post.headerImage} title={post.title} />
                 <BlogPostMetaDetails
@@ -39,6 +43,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                             captionAdditionalClasses: ['bg-primary rounded px-8 py-1.5 opacity-100'],
                         }
                     }
+                    paragraphProps={{ additionalClasses: ['font-normal'] }}
                 />
                 <BlogPostAuthor authorName=" John Doe" additionalClass={['py-5']} />
             </div>
