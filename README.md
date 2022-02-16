@@ -72,7 +72,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsby-starter-boilerplate)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq/flotiq-gatsby-blog-1)
 
 You can also deploy this project to Heroku in 3 minutes:
 
