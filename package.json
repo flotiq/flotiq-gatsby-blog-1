@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-boilerplate",
+  "name": "flotiq-gatsby-blog-1",
   "private": true,
-  "description": "A boilerplate starter for Gatsby",
+  "description": "A blog starter for Gatsby",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Flotiq team <helo@flotiq.com> (https://flotiq.com/)",
@@ -19,8 +19,9 @@
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "@popperjs/core": "^2.11.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.0",
-    "flotiq-components-react": "https://github.com/flotiq/flotiq-components-react.git",
+    "flotiq-components-react": "^0.4.7",
     "gatsby": "^4.4.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
@@ -67,9 +68,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/flotiq/gatsby-starter-boilerplate"
+    "url": "https://github.com/flotiq/flotiq-gatsby-blog-1"
   },
   "bugs": {
-    "url": "https://github.com/flotiq/gatsby-starter-boilerplate/issues"
+    "url": "https://github.com/flotiq/flotiq-gatsby-blog-1/issues"
   }
 }

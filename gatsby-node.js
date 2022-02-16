@@ -8,15 +8,8 @@ exports.createPages = async ({ graphql, actions }) => {
       query GetBlogPosts {
         allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}) {
           edges {
-            node{
-              headerImage {
-                extension
-                id
-              }
-              content
-              id
+            node {
               slug
-              title
             }
           }
         }

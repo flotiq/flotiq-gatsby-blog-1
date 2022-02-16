@@ -1792,6 +1792,11 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
+"@tailwindcss/line-clamp@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.3.1.tgz#4d8441b509b87ece84e94f28a4aa9998413ab849"
+  integrity sha512-pNr0T8LAc3TUx/gxCfQZRe9NB2dPEo/cedPHzUGIPxqDMhgjwNm6jYxww4W5l0zAsAddxr+XfZcqttGiFDgrGg==
+
 "@tailwindcss/typography@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.0.tgz#47886ec46ac41e1211d24fea05301046d9b30906"
@@ -5272,9 +5277,10 @@ flatted@^3.1.0:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.4.tgz"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-"flotiq-components-react@https://github.com/flotiq/flotiq-components-react.git":
-  version "0.3.0"
-  resolved "https://github.com/flotiq/flotiq-components-react.git#a3b3e4972fa84a34d1d0cc8efd2539ad0608ddef"
+flotiq-components-react@^0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/flotiq-components-react/-/flotiq-components-react-0.4.7.tgz#24791d16bd65c7b5857dd36219ff9af9b43e82a5"
+  integrity sha512-ekz98sPHnUKOvcm3Yxe8CQaPbxTtrqnCet/L4EO0BOLKiKXL3BUwdARWnJz/OM29fDkqVcFdqXCB1FRnna6OfA==
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   version "1.14.6"
