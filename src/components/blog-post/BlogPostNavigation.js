@@ -19,7 +19,7 @@ const BlogPostNavigation = ({ additionalClass, prevText, nextText, pageContext }
         <div className="-mt-px w-0 flex-1 flex justify-end">
             {pageContext.next && (
                 <Link
-                    to={`/${pageContext.previous.slug}`}
+                    to={`/${pageContext.next.slug}`}
                     className="border-t-2 border-transparent pt-4 pl-1
                             inline-flex items-center text-sm md:text-lg font-medium hover:text-secondary"
                 >
