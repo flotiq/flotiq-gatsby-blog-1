@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Logo from '../assets/kyan-logo.png';
 import LogoBadge from '../assets/flotiq-logo-badge.svg';
 
@@ -67,13 +68,13 @@ const Footer = () => (
             <div className="w-full md:w-auto px-5 md:px-0 mt-8
                 flex justify-between md:justify-center items-center space-x-5 md:space-x-10"
             >
-                <a href="/">
+                <Link to="/">
                     <img
                         className="block h-8 w-auto md:h-10 w-auto mr-5 md:mr-10"
                         src={Logo}
                         alt="Flotiq"
                     />
-                </a>
+                </Link>
                 <div className="flex items-center justify-center space-x-4 md:space-x-3">
                     {navigation.social.map((item) => (
                         <a
