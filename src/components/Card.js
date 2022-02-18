@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card } from 'flotiq-components-react';
 
-const CustomCard = ({ title, excerpt, date, readingTime, tags, image, onClick }) => {
+const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
     return (
         <Card
             vertical
-            onClick={onClick}
             bordered={false}
             additionalClasses={['mb-4 cursor-pointer']}
             proportionsForVertical={{
