@@ -5,10 +5,10 @@ const CustomCard = ({ title, excerpt, date, readingTime, tags, image }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
     return (
         <Card
-            vertical
+            horizontal
             bordered={false}
             additionalClasses={['mb-4 cursor-pointer']}
-            proportionsForVertical={{
+            proportionsForHorizontal={{
                 body: '2/5',
                 img: '3/5',
                 breakpoint: 'lg',
