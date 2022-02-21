@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     tags={['#photo', '#cookig', '#food']}
                     additionalClass={['py-6']}
                 />
-                <Header text={post.title} alignement="center" additionalClasses={['pt-10 pb-10']} />
+                <Header text={post.title} alignement="center" additionalClasses={['px-4 md:px-12 pt-10 pb-10']} />
                 <Content
                     blocks={post.content.blocks}
                     additionalClasses={['px-4 md:px-12 text-sm md:text-lg']}
