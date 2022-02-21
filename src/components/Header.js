@@ -1,6 +1,7 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Link } from 'gatsby';
 import Logo from '../assets/kyan-logo.png';
 
 const Header = () => (
@@ -25,13 +26,13 @@ const Header = () => (
                                 </Disclosure.Button>
                             </div>
                             <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
-                                <a href="/">
+                                <Link to="/">
                                     <img
                                         className="block h-8 md:h-12 w-auto"
                                         src={Logo}
                                         alt="Flotiq"
                                     />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="hidden md:flex items-center justify-center w-full">
