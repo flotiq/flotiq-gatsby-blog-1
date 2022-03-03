@@ -15,6 +15,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout additionalClass={['bg-white px-6']}>
             <Helmet>
                 <title>{post.title}</title>
+                <meta
+                    name="description"
+                    content={post.excerpt}
+                />
             </Helmet>
             <div className="max-w-7xl mx-auto mt-20 pb-4 rounded-2xl bg-light-gray overflow-hidden">
                 <BlogPostFeaturedImage headerImage={post.headerImage} title={post.title} />
@@ -67,6 +71,7 @@ export const pageQuery = graphql`
         blogpost( slug: { eq: $slug } ) {
             id
             title
+            excerpt
             headerImage {
                 extension
                 url

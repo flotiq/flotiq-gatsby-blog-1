@@ -13,7 +13,7 @@ module.exports = {
     siteMetadata: {
         title: 'Flotiq gatsby starter for blog',
         description: 'Flotiq gatsby starter for blog',
-        siteUrl: 'https://example.com',
+        siteUrl: 'https://flotiqgatsbyblog1master.gatsbyjs.io',
     },
     plugins: [
         {
@@ -61,8 +61,8 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
-                host: 'https://your-domain.com',
-                sitemap: 'https://your-domain.com/sitemap.xml',
+                host: 'https://flotiqgatsbyblog1master.gatsbyjs.io',
+                sitemap: 'https://flotiqgatsbyblog1master.gatsbyjs.io/sitemap.xml',
                 policy: [{ userAgent: '*', allow: '/' }],
             },
         },
