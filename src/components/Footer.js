@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { PoweredByFlotiq } from 'flotiq-components-react';
 import Logo from '../assets/kyan-logo.png';
-import LogoBadge from '../assets/flotiq-logo-badge.svg';
 
 const navigation = {
     social: [
@@ -64,7 +64,7 @@ const navigation = {
 
 const Footer = () => (
     <footer>
-        <div className="max-w-7xl mx-auto py-12 overflow-hidden lg:px-8">
+        <div className="max-w-7xl mx-auto pt-12 overflow-hidden lg:px-8">
             <div className="w-full md:w-auto px-5 md:px-0 mt-8
                 flex justify-between md:justify-center items-center space-x-5 md:space-x-10"
             >
@@ -94,18 +94,7 @@ const Footer = () => (
             <div className="w-full md:w-auto px-5 md:px-0 py-5 mt-7 md:mt-15
                 flex justify-between md:justify-center items-center bg-light-gray md:bg-transparent"
             >
-                <a href="https://flotiq.com" target="_blank" rel="noreferrer">
-                    <div className="flex items-center mr-12">
-                        <img
-                            className="block h-5 md:h-6 w-auto mr-2"
-                            src={LogoBadge}
-                            alt="Flotiq"
-                        />
-                        <p className="text-center text-xs md:text-base font-semibold">
-                            Powered by Flotiq
-                        </p>
-                    </div>
-                </a>
+                <PoweredByFlotiq />
                 <p className="text-center text-xs md:text-base font-light">
                     Copyright &copy; Flotiq 2022
                 </p>
