@@ -14,7 +14,7 @@ const NotFoundPage = () => (
         </Header>
         <div className="text-center my-20 py-20">
             {/* Example usage of button */}
-            <Link to="/"><Button label="Go back to index" /></Link>
+            <Link to="/"><Button variant="secondary" label="Go back to index" /></Link>
         </div>
     </Layout>
 );
