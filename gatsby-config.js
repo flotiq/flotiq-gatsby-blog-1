@@ -90,7 +90,7 @@ module.exports = {
             options: {
                 headers: {
                     '/*': [
-                        'x-frame-options: allow-from *',
+                        'x-frame-options: allow-from https://jamstackthemes.dev/',
                     ],
                 },
             },
