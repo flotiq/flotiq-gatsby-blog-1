@@ -1,6 +1,7 @@
 import React from 'react';
+import BlogPostTags from './BlogPostTags';
 
-const BlogPostMetaDetails = ({ date, readingTime, tags, additionalClass }) => (
+const BlogPostMetaDetails = ({ date, readingTime, withTags=false, tags, additionalClass }) => (
     <div
         className={['px-6 md:px-12 flex flex-wrap items-center justify-between font-light',
             ...additionalClass].join(' ')}
@@ -16,20 +17,9 @@ const BlogPostMetaDetails = ({ date, readingTime, tags, additionalClass }) => (
             </p>
             <div />
         </div>
-        {/* Uncomment this to add tags to your posts */}
-        {/* <div className="mt-4 md:mt-0 basis-full md:basis-1/2 */}
-        {/* flex flex-wrap items-center justify-center md:justify-end space-x-6 md:space-x-8" */}
-        {/* > */}
-        {/*    {tags && tags.map((tag) => ( */}
-        {/*        <a */}
-        {/*            href="/" */}
-        {/*            className="hover:text-secondary" */}
-        {/*            key={tag} */}
-        {/*        > */}
-        {/*            {tag} */}
-        {/*        </a> */}
-        {/*    ))} */}
-        {/* </div> */}
+        {withTags && (
+            <BlogPostTags tags={tags} />
+        )}
     </div>
 );
 
