@@ -33,7 +33,7 @@ const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags,
                 </Link>
                 <div className="w-full">
                     {withTags && (
-                            <BlogPostTags tags={tags} />
+                        <BlogPostTags tags={tags} />
                     )}
                     <Link to={`/${slug}`}>
                         <div className="flex flex-wrap justify-between text-sm md:text-xs xl:text-sm font-light mt-5">
