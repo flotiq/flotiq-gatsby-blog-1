@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
+import BlogPostTags from './blog-post/BlogPostTags';
 
-const CustomCard = ({ title, excerpt, date, readingTime, tags, image, slug }) => {
+const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags, image, slug }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
     return (
         <Card
@@ -31,20 +32,9 @@ const CustomCard = ({ title, excerpt, date, readingTime, tags, image, slug }) =>
                     </div>
                 </Link>
                 <div className="w-full">
-                    {/* Uncomment this to add tags to your posts */}
-                    {/* <div className="flex flex-wrap justify-start text-sm font-light mt-5 md:mt-1 xl:mt-5"> */}
-                    {/*    {tags && tags.map((tag, index) => ( */}
-                    {/*        <a */}
-                    {/*            href="/" */}
-                    {/*            className={`mx-1 my-1 px-6 py-2 md:px-2 md:py-1 xl:px-6 xl:py-2 */}
-                    {/*                inline-flex items-center justify-center */}
-                    {/*                rounded-md underline text-sm font-medium ${backgrounds[index % 3]}`} */}
-                    {/*            key={tag} */}
-                    {/*        > */}
-                    {/*            {tag} */}
-                    {/*        </a> */}
-                    {/*    ))} */}
-                    {/* </div> */}
+                    {withTags && (
+                        <BlogPostTags tags={tags} />
+                    )}
                     <Link to={`/${slug}`}>
                         <div className="flex flex-wrap justify-between text-sm md:text-xs xl:text-sm font-light mt-5">
                             <p className="mr-5">
