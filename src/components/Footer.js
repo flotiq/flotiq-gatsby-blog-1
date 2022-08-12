@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import { PoweredByFlotiq } from 'flotiq-components-react';
 import Logo from '../assets/kyan-logo.png';
 
-
 const navigation = {
     social: [
         {
@@ -63,9 +62,9 @@ const navigation = {
     ],
 };
 
-export function Year() {
-    const CurrentYear = new Date()
-    const date = CurrentYear.getFullYear()
+export function CopyrightNotice() {
+    const currentYear = new Date()
+    const date = currentYear.getFullYear()
     return (<p>Copyright &copy; Flotiq {date}</p>)
   }
   
@@ -91,7 +90,6 @@ const Footer = () => (
                             className="text-secondary hover:text-gray-500
                                 p-3 bg-light-gray rounded"
                             rel="noreferrer"
-                            
                         >
                             <span className="sr-only">{item.name}</span>
                             <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -103,9 +101,8 @@ const Footer = () => (
                 flex justify-between md:justify-center items-center bg-light-gray md:bg-transparent"
             >
                 <PoweredByFlotiq />
-                
                 <p className="text-center text-xs md:text-base font-light">
-                     {Year()}
+                     {CopyrightNotice()}
                 </p>
             </div>
         </div>
