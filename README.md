@@ -21,7 +21,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 
 Start the project from template using [Flotiq CLI](https://github.com/flotiq/flotiq-cli)
 
- ```bash
+```bash
 npm install -g flotiq-cli
 flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-blog-1.git [flotiqApiKey]
 ```
@@ -42,7 +42,6 @@ The `.env.development` file inside the root of the directory should have the fol
 
 ```
 GATSBY_FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
-SNIPCART_API_KEY=YOUR SNIPCART API KEY
 GA_MEASUREMENT_ID=YOUR MEASUREMENT ID
 ```
 
