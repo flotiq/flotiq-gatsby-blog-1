@@ -52,7 +52,9 @@ const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags,
                 </div>
             </Card.Body>
             <Link to={`/${slug}`} className="lg:basis-3/5 order-1 lg:order-2">
-                <Card.Img src={image} alt={title} additionalContainerClasses={['order-1 lg:order-2']} />
+                {image && (
+                    <Card.Img src={image} alt={title} additionalContainerClasses={['order-1 lg:order-2']} />
+                )}
             </Link>
         </Card>
     );

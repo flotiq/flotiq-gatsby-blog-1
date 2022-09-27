@@ -62,12 +62,17 @@ const navigation = {
     ],
 };
 
-export function CopyrightNotice() {
-    const currentYear = new Date()
-    const date = currentYear.getFullYear()
-    return (<p>Copyright &copy; Flotiq {date}</p>)
-  }
-  
+const CopyrightNotice = () => {
+    const currentYear = new Date();
+    const date = currentYear.getFullYear();
+    return (
+        <span>
+            Copyright &copy; Flotiq
+            {date}
+        </span>
+    );
+};
+
 const Footer = () => (
     <footer>
         <div className="max-w-7xl mx-auto pt-12 overflow-hidden lg:px-8">
