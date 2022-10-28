@@ -91,6 +91,7 @@ export const pageQuery = graphql`
             }
             content {
                 blocks {
+                    id
                     data {
                         alignment
                         anchor
