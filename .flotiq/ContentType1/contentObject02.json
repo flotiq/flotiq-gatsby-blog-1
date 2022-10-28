@@ -1,0 +1,33 @@
+{
+  "id": "blogpost-2",
+  "slug": "post-with-picture",
+  "title": "Post with picture",
+  "content": {
+    "time": 1643366117,
+    "blocks": [
+      {
+        "id": "AOAWmvP1rd",
+        "data": {
+          "text": "Example header",
+          "level": 2
+        },
+        "type": "header"
+      },
+      {
+        "id": "CzLBZad8_Z",
+        "data": {
+          "text": "Example paragraph."
+        },
+        "type": "paragraph"
+      }
+    ],
+    "version": "2.22.0"
+  },
+  "excerpt": "If you\u2019re a beginning website owner you might be wondering what a CMS is and if you need one. This article will look at some valid reasons to invest in a CMS, but also will try to shed some light on the caveats, so read on.",
+  "headerImage": [
+    {
+      "type": "internal",
+      "dataUrl": "/api/v1/content/_media/_media-7a279806-381a-4043-b9f8-b257df70e303"
+    }
+  ]
+}
