@@ -78,7 +78,6 @@
           "caption": "Example audio file",
           "fileName": "file_example_MP3_700KB.mp3",
           "extension": "mp3",
-          "stretched": false,
           "withBorder": false,
           "withBackground": false
         },
@@ -119,7 +118,6 @@
           "caption": "Example image",
           "fileName": "blog-image-1.jpg",
           "extension": "jpg",
-          "stretched": false,
           "withBorder": false,
           "withBackground": false
         },
