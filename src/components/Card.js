@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
 import BlogPostTags from './blog-post/BlogPostTags';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags, image, slug }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
@@ -53,7 +54,7 @@ const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags,
             </Card.Body>
             <Link to={`/${slug}`} className="lg:basis-3/5 order-1 lg:order-2">
                 {image && (
-                    <Card.Img src={image} alt={title} additionalContainerClasses={['order-1 lg:order-2']} />
+                    <GatsbyImage image={getImage(image)} alt={title} imgClassName="order-1 lg:order-2" />
                 )}
             </Link>
         </Card>

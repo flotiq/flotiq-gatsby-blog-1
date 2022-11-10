@@ -12,7 +12,7 @@ const BlogCards = ({ posts }) => (
                 tags={['#photo', '#cookig', '#food']}
                 date={moment(post.flotiqInternal.createdAt).format('Do MMMM yyyy')}
                 readingTime="7 min"
-                image={post.headerImage[0]?.localFile.publicURL}
+                image={post.headerImage[0]?.localFile}
                 slug={post.slug}
             />
         ))}
