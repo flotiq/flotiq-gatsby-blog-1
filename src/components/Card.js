@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Card } from 'flotiq-components-react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import BlogPostTags from './blog-post/BlogPostTags';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags, image, slug }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
