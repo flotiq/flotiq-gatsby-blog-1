@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import BlogPostTags from './blog-post/BlogPostTags';
 
 const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags, image, slug }) => {
-    const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
     return (
         <Card
             horizontal
@@ -53,9 +52,11 @@ const CustomCard = ({ title, excerpt, date, readingTime, withTags = false, tags,
                 </div>
             </Card.Body>
             <Link to={`/${slug}`} className="lg:basis-3/5 order-1 lg:order-2">
-                {image && (
-                    <GatsbyImage image={getImage(image)} alt={title} imgClassName="order-1 lg:order-2" />
-                )}
+                <div className="min-w-[100vw] lg:min-w-fit">
+                    {image && (
+                        <GatsbyImage image={getImage(image)} alt={title} width={100} height={100} className="order-1 lg:order-2" />
+                    )}
+                </div>
             </Link>
         </Card>
     );
