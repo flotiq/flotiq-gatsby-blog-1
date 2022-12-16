@@ -107,7 +107,7 @@ const Footer = () => (
             >
                 <PoweredByFlotiq />
                 <p className="text-center text-xs md:text-base font-light">
-                     {CopyrightNotice()}
+                    {CopyrightNotice()}
                 </p>
             </div>
         </div>
