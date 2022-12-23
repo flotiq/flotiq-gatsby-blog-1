@@ -27,37 +27,41 @@ Use it for your needs, add content and customize in any way"
 };
 
 export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
-        site {
-            siteMetadata {
-                title
-                description
-            }
-        }
-        allBlogpost(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
-            nodes {
-                headerImage {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-                        }
-                    }
-                }
-                id
-                excerpt
-                slug
-                title
-                flotiqInternal {
-                    createdAt
-                }
-            }
-        }
+query indexQuery($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+        description
+      }
     }
+    allBlogpost(
+      sort: {flotiqInternal: {createdAt: DESC}}
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        headerImage {
+          extension
+          url
+          width
+          height
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+            }
+          }
+        }
+        id
+        excerpt
+        slug
+        title
+        flotiqInternal {
+          createdAt
+        }
+      }
+    }
+  }
 `;
 
 export default IndexPage;
