@@ -40,7 +40,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "typescript": "^4.5.4",
-    "webpack": "^5.65.0"
+    "webpack": "^5.82.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -74,5 +74,8 @@
   },
   "bugs": {
     "url": "https://github.com/flotiq/flotiq-gatsby-blog-1/issues"
+  },
+  "resolutions": {
+    "webpack": "^5.82.0"
   }
 }
