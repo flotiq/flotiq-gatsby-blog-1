@@ -48,7 +48,7 @@ query indexQuery($skip: Int!, $limit: Int!) {
           localFile {
             publicURL
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE, formats: [AUTO, WEBP, AVIF])
             }
           }
         }

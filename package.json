@@ -74,5 +74,8 @@
   },
   "bugs": {
     "url": "https://github.com/flotiq/flotiq-gatsby-blog-1/issues"
-  } 
+  },
+  "resolutions": {
+    "webpack": "^5.85.0"
+  }
 }
