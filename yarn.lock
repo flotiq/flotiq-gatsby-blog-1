@@ -1526,10 +1526,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
   integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
 
-"@fontsource/sora@^5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-5.0.18.tgz#737d239accb9669593eb1ab62bd2060d05cbdcd9"
-  integrity sha512-ti9nr3/pRdxUVSAXdO5wX92KFFH55KwKgKX45dIA9DJcpV+tGgATdu14RYSbg1wGwxjL7z9tWHapcZJdjPp1UQ==
+"@fontsource/sora@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-5.0.19.tgz#1873263f431aac0fcbf9420cd38cdd78fcbe906b"
+  integrity sha512-UonP14EH8X0WgKjTbOQsmQAL862O4wvi4i4+EDN/gUutMau6nOjrMutn8XiLyRm98cjUbijMXhJ4NcOI+MBFNw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.13.1":
   version "2.13.1"
