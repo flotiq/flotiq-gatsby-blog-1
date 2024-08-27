@@ -13,15 +13,9 @@ module.exports = {
     },
     extends: [
         'react-app',
-        'plugin:react/recommended',
-        'airbnb',
-        'eslint:recommended',
     ],
     plugins: [
-        'jsx-a11y',
-        'react-hooks',
         'flowtype',
-        'import',
     ],
     rules: {
     /* Restrict file extensions that may contain JSX */
