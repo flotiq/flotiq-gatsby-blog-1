@@ -1,6 +1,8 @@
 {
   "name": "blogpost",
   "label": "Blog Post",
+  "workflowId": "generic",
+  "internal": false,
   "schemaDefinition": {
     "type": "object",
     "allOf": [
@@ -121,5 +123,6 @@
         }
       }
     }
-  }
+  },
+  "featuredImage": []
 }
