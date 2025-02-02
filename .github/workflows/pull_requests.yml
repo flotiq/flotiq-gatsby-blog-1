@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [ 20.x ]
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -30,6 +30,8 @@ jobs:
           GA_MEASUREMENT_ID: ''
   dependabot:
     needs: test-build
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
     steps:
